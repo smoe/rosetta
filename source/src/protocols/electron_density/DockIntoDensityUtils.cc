@@ -852,7 +852,7 @@ select_density_points( core::pose::Pose const & pose,
 
 	utility::vector1< numeric::xyzVector< core::Real > > points_to_search;
 
-	ObjexxFCL::FArray3D< float > const & densdata = core::scoring::electron_density::getDensityMap().get_data();
+	ObjexxFCL::FArray3D< float > const densdata = core::scoring::electron_density::getDensityMap().get_data();
 	ObjexxFCL::FArray3D< std::complex<core::Real> > Fdens, Frot;
 	numeric::fourier::fft3(densdata, Fdens);
 
